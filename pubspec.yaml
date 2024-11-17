@@ -1,0 +1,9 @@
+name: flutter_tutorials_es
+
+environment:
+  sdk: '>=3.2.6 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  melos: ^5.2.1

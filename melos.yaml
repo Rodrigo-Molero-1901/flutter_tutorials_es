@@ -1,0 +1,35 @@
+name: airmiles_flutter
+repository: https://github.com/AirMilesLoyaltyInc/airmiles_flutter_workspace
+
+packages:
+  - app/*
+  - modules/*
+
+scripts:
+  clean:
+    run: flutter clean
+
+  get:
+    run: melos exec -c 1 --fail-fast -- flutter pub get
+    description: Run `flutter pub get` in all packages.
+    packageFilters:
+      flutter: true
+  br:
+    run: |
+      melos exec -c 1 --depends-on="build_runner" -- "dart pub run build_runner build -d" 
+      melos exec -c 1 -- "dart format ."
+    description: Run `dart pub run build_runner build -d` in selected flutter packages.
+    packageFilters:
+      flutter: true
+      dependsOn: build_runner
+
+  intl:
+    run: flutter gen-l10n
+
+  format:
+    run: melos exec -c 1 --fail-fast -- dart format .
+    packageFilters:
+      flutter: true
+
+  generate:
+    run: melos run br && melos run intl
