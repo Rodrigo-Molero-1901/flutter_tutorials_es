@@ -3,7 +3,7 @@ repository: https://github.com/AirMilesLoyaltyInc/airmiles_flutter_workspace
 
 packages:
   - app/*
-  - modules/*
+  - modules/**
 
 scripts:
   clean:

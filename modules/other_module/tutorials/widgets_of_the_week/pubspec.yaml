@@ -1,4 +1,5 @@
-name: other_module
+name: widgets_of_the_week
+description: "Apartado de widgets de la semana"
 publish_to: 'none'
 version: 1.0.0+1
 
@@ -8,11 +9,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
-  go_router: ^14.2.3
-
-  widgets_of_the_week:
-    path: tutorials/widgets_of_the_week
 
 dev_dependencies:
   flutter_test:

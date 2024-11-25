@@ -25,30 +25,39 @@ class _FlutterTutorialsAppState extends State<FlutterTutorialsApp> {
           return TutorialSelectorPage();
         },
       ),
+
+      // Basic module
       GoRoute(
         path: Routes.pathBasic,
         builder: (context, state) {
           return BasicModulePage();
         },
       ),
+
+      // Intermediate module
       GoRoute(
         path: Routes.pathIntermediate,
         builder: (context, state) {
           return IntermediateModulePage();
         },
       ),
+
+      // Advanced module
       GoRoute(
         path: Routes.pathAdvanced,
         builder: (context, state) {
           return AdvancedModulePage();
         },
       ),
+
+      // Other module
       GoRoute(
         path: Routes.pathOther,
         builder: (context, state) {
           return OtherModulePage();
         },
       ),
+      ...otherModuleTutorialRoutes,
     ],
   );
 

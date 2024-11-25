@@ -17,8 +17,17 @@ class _TutorialSelectorPageState extends State<TutorialSelectorPage> {
     return Scaffold(
       body: Center(
         child: SingleChildScrollView(
+          padding: const EdgeInsets.symmetric(vertical: 30.0),
           child: Column(
             children: [
+              Text(
+                'Tutoriales de Flutter en español',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              const SizedBox(height: 30.0),
               ElevatedButton(
                 onPressed: () => context.push(Routes.pathBasic),
                 child: const Text('Básico'),
@@ -39,7 +48,7 @@ class _TutorialSelectorPageState extends State<TutorialSelectorPage> {
                 child: const Text('Otros'),
               ),
               const SizedBox(height: 40.0),
-              Text('Tutoriales elaborados por:'),
+              Text('Elaborado por:'),
               const SizedBox(height: 15.0),
               Assets.icons.logo.svg(),
             ],
